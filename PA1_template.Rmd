@@ -3,6 +3,7 @@ title: "Reproducible Research: Peer Assessment 1"
 output: 
   html_document:
     keep_md: true
+    theme: "cerulean"
 ---
 
 
@@ -19,7 +20,6 @@ summary(steps_no_na)
 The ggplot2 library's qplot() will be used for plotting. The function tapply() is used to sum steps across each day. The number of steps per day is then plotted as a histogram.
 ```{r}
 library(ggplot2)
-summary(steps_no_na)
 steps_per_day <- tapply(steps_no_na$steps, steps_no_na$date, sum)
 summary(steps_per_day)
 qplot(steps_per_day, binwidth=1000) +

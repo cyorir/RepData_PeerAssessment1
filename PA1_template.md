@@ -26,20 +26,6 @@ The ggplot2 library's qplot() will be used for plotting. The function tapply() i
 
 ```r
 library(ggplot2)
-summary(steps_no_na)
-```
-
-```
-##      steps             date               interval     
-##  Min.   :  0.00   Min.   :2012-10-02   Min.   :   0.0  
-##  1st Qu.:  0.00   1st Qu.:2012-10-16   1st Qu.: 588.8  
-##  Median :  0.00   Median :2012-10-29   Median :1177.5  
-##  Mean   : 37.38   Mean   :2012-10-30   Mean   :1177.5  
-##  3rd Qu.: 12.00   3rd Qu.:2012-11-16   3rd Qu.:1766.2  
-##  Max.   :806.00   Max.   :2012-11-29   Max.   :2355.0
-```
-
-```r
 steps_per_day <- tapply(steps_no_na$steps, steps_no_na$date, sum)
 summary(steps_per_day)
 ```
